@@ -5,20 +5,41 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
-  font-family: sans-serif;
+
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
+
+}
+.logo{
+  position: fixed;
 }
 body {
-  margin: 0;
+    
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:20%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+    text-align:center;
 }
+
+p1{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  color: #797979;
+  font-size: 25px;
+  
+}
+
 article,
 aside,
 details,
 figcaption,
 figure,
 footer,
-header,
+
 hgroup,
 main,
 menu,
@@ -59,10 +80,7 @@ strong {
 dfn {
   font-style: italic;
 }
-h1 {
-  margin: .67em 0;
-  font-size: 2em;
-}
+
 mark {
   color: #000;
   background: #ff0;
@@ -83,6 +101,7 @@ sup {
 sub {
   bottom: -.25em;
 }
+
 img {
   border: 0;
 }
@@ -231,6 +250,7 @@ th {
   p,
   h2,
   h3 {
+    
     orphans: 3;
     widows: 3;
   }
