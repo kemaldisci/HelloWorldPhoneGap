@@ -36,31 +36,34 @@
 	* Create your own at http://cspisawesome.com-->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 	<title>Login</title>
+    <img class="nav" src="./img/logo.png" alt="logo" width="100%">
 </head>
 <body ng-app="myApp" ng-controller="mainCtrl">
 	<div class="myApp">
-        <img src="./img/logo.png" alt="logo" height="100%" width="100%">
     <form name="form">
         <div class="form-group">
-            <input type="text" ng-model="data.username" name="username" id="username" placeholder ="Username "class="form-control"/><br>
+            <input type="text" ng-model="data.username" name="username" id="username" placeholder ="Username "  class="form-control" onclick="disableScroll()"/><br>
             <input type="password" ng-model="data.password" name="password" id="password" placeholder="Password" class="form-control"/>
-        </div>
+        </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <div class="form-actions">
             <button class="btn" ng-click="signin()">Sign-In</button>
             <button class="btn" ng-click="signin()" formaction="./signup.html">Sign-Up</button>
-            <button class="btn btn-link" ng-click="signin()" formaction="">Forget Password?</button>
+            <button class="btn btn-link" ng-click="signin()" formaction="">Forget Password?</button><br><br><br><br><br><br><br>
         </div>
         <a class="btn btn-block btn-social btn-facebook" onclick="fblogin()">
             <span class="fa fa-facebook" ></span> Sign in with Facebook
-		</a>
+		</a><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </form>
     </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/signin.js"></script>
     <script type="text/javascript">
-    
- 
+        window.addEventListener('load', function() {
+                document.body.addEventListener('touchmove', function(e) {
+                    e.preventDefault();
+                }, false);
+            }, false);
         app.initialize();
     </script>
 </body>

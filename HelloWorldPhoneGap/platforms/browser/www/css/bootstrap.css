@@ -10,11 +10,18 @@ html {
       -ms-text-size-adjust: 100%;
 
 }
+
+.navbar-fixed-top .nav {
+    position: initial;
+    padding: 15px 0;  
+}
+
 .logo{
-  position: fixed;
+    
+    position: absolute;
+    
 }
 body {
-    
     position:absolute;             /* position in the center of the screen */
     left:50%;
     top:20%;
