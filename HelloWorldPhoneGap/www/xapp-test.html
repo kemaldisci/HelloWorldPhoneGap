@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>
+
+<div ng-app="xApp" ng-controller="xCtrl"> 
+<h1>{{time}}</h1>
+<h1>{{result}}</h1>
+<h1>{{count}}</h1>
+  <li ng-repeat="x in xdata">
+    {{ x.Name + ',' + x.City + ',' + x.Country}}
+  </li>
+<button ng-click="myFunction()">Click me!</button>
+</div>
+<script type="text/javascript" src="js/xapp.js"></script>
+</body>
+</html>
+
