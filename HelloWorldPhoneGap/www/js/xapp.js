@@ -14,7 +14,6 @@ app.service('CreatedService2', function(){
 
 app.controller('xCtrl', function($scope,$http,$interval,CreatedService) {
     $scope.number = CreatedService.CreateFunction(1453);
-    var str = "ss"
     $scope.enc = enc.window.btoa(str);
     $scope.time = new Date().toLocaleTimeString();
     $interval(function () {
