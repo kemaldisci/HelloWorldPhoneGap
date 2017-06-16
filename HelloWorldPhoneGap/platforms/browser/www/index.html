@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <title>Login</title>
     <img class="nav" src="./img/logo.png" alt="logo" width="100%">
   </head>
+
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-  <body ng-app="index" ng-controller="indexCtrl">
+
+  <body ng-app="xApp" ng-controller="xCtrl">
     <div class="app">
       <div class="form-group">
         <form name="form">
           <input type="text" class="form-control" placeholder ="Username " ng-model="uid"><br>
           <input type="password" class="form-control" placeholder ="Password" ng-model="pwd"><br>
           <button class="btn" type="button" ng-click="login()">Login</button>
-          <a href="./signup.html" type="button" class="btn">SignUp</a>
           <p>{{time}}</p>
           <p>{{u_id}}</p>  
-          <p>{{p_wd}}</p>
+          <p>{{p_wd}}</p>  
         </form>  
       </div>
     </div>
-  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="js/xapp.js"></script>
   </body>
 </html>
 
