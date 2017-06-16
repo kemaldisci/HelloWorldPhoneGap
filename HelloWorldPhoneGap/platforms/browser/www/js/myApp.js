@@ -1,4 +1,4 @@
-
+/*
 
 var myapp = angular.module('myApp', ["ngResource","ngRoute","ngCookies"]);
 myapp.controller('mainCtrl', 
@@ -45,3 +45,4 @@ if(isLoginPage){
         window.location.href = "signin";
     }
 }
+*/
