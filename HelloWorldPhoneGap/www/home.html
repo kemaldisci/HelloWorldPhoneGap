@@ -38,7 +38,28 @@
 	<title>Login</title>
     <img class="nav" src="./img/logo.png" alt="logo" width="100%">
 </head>
-<body>
-     HOME PAGE
+<body ng-app="app" ng-controller="mainCtrl">
+	<div class="app">
+    <form name="form">
+        <div class="form-group">
+            <input type="text" ng-model="data.username" name="username" id="username" placeholder ="Username "  class="form-control" onclick="disableScroll()"/>
+            <input type="password" ng-model="data.password" name="password" id="password" placeholder="Password" class="form-control"/>
+        </div>
+        <div class="form-actions">
+            <button class="btn" ng-click="signin()">Sign-In</button>
+            <button class="btn" ng-click="signin()" formaction="./signup.html">Sign-Up</button>
+            <button class="btn btn-link" ng-click="signin()" formaction="">Forget Password?</button>
+        </div>
+        <a class="btn btn-block btn-social btn-facebook" onclick="fblogin()">
+            <span class="fa fa-facebook" ></span> Sign in with Facebook
+		</a>
+    </form>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/signin.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
 </body>
 </html>

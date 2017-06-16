@@ -48,7 +48,7 @@
             <input type="password" ng-model="data.password" name="password" id="password" placeholder="Password" class="form-control"/>
         </div>
         <div class="form-actions">
-            <button class="btn" ng-click="login()">Sign-In</button>
+            <button class="btn" ng-click="signin()">Sign-In</button>
           </div>   
         <div class="form-actions">
             <button class="btn" formaction="./signup.html">Sign-Up</button>
@@ -63,6 +63,8 @@
     </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
-
+    <script type="text/javascript">
+        app.initialize();
+    </script>
 </body>
 </html>
