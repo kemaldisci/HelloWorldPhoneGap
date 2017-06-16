@@ -7,7 +7,7 @@ app.service('indexService', function(){
 app.controller('indexCtrl', function($scope,$http,$interval,indexService) {
     $scope.login = function(){
         if ($scope.uid==null){
-            alert("Uid is null");
+            alert("Uid is  ");
             return ;
         }
         else if ($scope.pwd==null){
