@@ -1,27 +1,40 @@
+
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-    <title>Login</title>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="msapplication-tap-highlight" content="no" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+	<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	<title>Login</title>
     <img class="nav" src="./img/logo.png" alt="logo" width="100%">
-  </head>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-  <body ng-app="index" ng-controller="indexCtrl">
-    <div class="app">
-      <div class="form-group">
-        <form name="form">
-          <input type="text" class="form-control" placeholder ="Username " ng-model="uid"><br>
-          <input type="password" class="form-control" placeholder ="Password" ng-model="pwd"><br>
-          <button class="btn" type="button" ng-click="login()">Login</button>
-          <a href="./signup.html" type="button" class="btn">SignUp</a>
-          <p>{{time}}</p>
-          <p>{{u_id}}</p>  
-          <p>{{p_wd}}</p>
-        </form>  
-      </div>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+<body ng-app="index" ng-controller="indexCtrl">
+	<div class="app">
+    <form name="form">
+        <div class="form-group">
+            <input type="text" ng-model="uid" name="username" id="username" placeholder ="Username "  class="form-control"/>
+            <input type="password" ng-model="pwd"  name="password" id="password" placeholder="Password" class="form-control"/>
+        </div>
+        <div class="form-actions">
+            <button class="btn" ng-click="login()">Sign-In</button>
+            <a href="./signup.html" type="button" class="btn">Sign-Up</a>
+            <button class="btn btn-link" ng-click="signin()" formaction="">Forget Password?</button>
+        </div>
+        <a class="btn btn-block btn-social btn-facebook" onclick="fblogin()">
+            <span class="fa fa-facebook" ></span> Sign in with Facebook
+		</a>
+    </form>
     </div>
-  <script type="text/javascript" src="js/index.js"></script>
-  </body>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/signin.js"></script>
+    <script type="text/javascript">
+    </script>
+</body>
 </html>
-
-

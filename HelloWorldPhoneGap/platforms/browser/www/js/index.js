@@ -1,10 +1,10 @@
-var app = angular.module('index', []);
+var app = angular.module('index', ["ngRoute"]);
 app.service('indexService', function(){
     this.encode = function (xcode){
         return window.btoa(xcode);
     }
 });
-app.controller('indexCtrl', function($scope,$http,$interval,indexService) {
+app.controller('indexCtrl', function($scope,$http,$interval) {
     $scope.login = function(){
         if ($scope.uid==null){
             alert("Uid is null");
@@ -13,12 +13,17 @@ app.controller('indexCtrl', function($scope,$http,$interval,indexService) {
         else if ($scope.pwd==null){
             alert("pwd is null");
             return ;
-        } 
-        else
+        }
+        else 
+        
+        window.location.href = "./home.html";
+        /*
         $scope.login_error = "";    
         $scope.u_id = "User ID : " +$scope.uid;
         $scope.p_wd = "Encode password : "+indexService.encode($scope.pwd);
         $scope.time = "Try time : "+new Date().toLocaleTimeString();
+        */
+        /*
         $http.get("http://localhost/").then(
             function isSuccess(ResponseResult) {
                 $scope.ResponseResult = response.status
@@ -28,4 +33,5 @@ app.controller('indexCtrl', function($scope,$http,$interval,indexService) {
                 $scope.ResponseResult = response.status ;
             });
             $scope.fixedValue="Fixed";
+            */
     }});
