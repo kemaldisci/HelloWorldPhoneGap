@@ -4,18 +4,56 @@ app.service('indexService', function(){
         return window.btoa(xcode);
     }
 });
-app.controller('indexCtrl', function($scope,$http,$interval) {
+app.controller('indexCtrl', function( $scope,$http,$interval,indexService
+    
+  /*  $scope,$http,$interval, $resource, $httpParamSerializer, $cookies*/) {
+
+
+     $scope.data = {
+        grant_type:"password", 
+        username: "", 
+        password: "", 
+        client_id: "clientIdPassword"
+    };
+
+
     $scope.login = function(){
-        if ($scope.uid==null){
+
+     /*   
+        if ($scope.data.username==null){
             alert("Uid is null");
             return ;
         }
-        else if ($scope.pwd==null){
+        else if ($scope.data.password==null){
             alert("pwd is null");
             return ;
         }
         else 
-        
+
+
+        $scope.encoded = indexService.encode($scope.password);
+*/
+
+      /*
+
+        var req = {
+            method: 'POST',
+            url: "http://localhost:8080/spring-security-oauth-server/oauth/token",
+            headers: {
+                "Authorization": "Basic " + $scope.encoded,
+                "Content-type": "application/x-www-form-urlencoded; charset=utf-8"
+            },
+            data: $httpParamSerializer($scope.data)
+        }
+        $http(req).then(function(data){
+            $http.defaults.headers.common.Authorization = 
+              'Bearer ' + data.data.access_token;
+            $cookies.put("access_token", data.data.access_token);
+            window.location.href = "./home.html";
+        }); 
+
+*/
+
         window.location.href = "./home.html";
         /*
         $scope.login_error = "";    
